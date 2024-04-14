@@ -1,0 +1,17 @@
+node_modules/
+
+# stop npm install from messing up
+package-lock.json
+
+# Webpack directory
+.webpack
+
+# Build directory
+.build
+
+dist/
+
+.idea
+.env
+.env.test
+yarn-error.log

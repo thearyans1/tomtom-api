@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "types": ["node","jest"],
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "noUncheckedIndexedAccess": true,
+    "sourceMap": true,
+    "declaration": true,
+    "composite": true,
+    "noEmit": true,
+    "lib": ["es2022"]
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}
