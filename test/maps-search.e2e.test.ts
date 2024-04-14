@@ -19,6 +19,8 @@ describe("Tomtom Places E2E Tests", () => {
       expect(firstRes).toHaveProperty("country");
       expect(firstRes).toHaveProperty("freeformAddress");
       expect(firstRes).toHaveProperty("municipality");
+      expect(firstRes).toHaveProperty("state");
+      expect(firstRes).toHaveProperty("streetName");
     });
 
     it("scopes search to Australia", async () => {

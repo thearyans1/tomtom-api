@@ -2,28 +2,30 @@ export enum Countries {
   "Australia" = "AU",
 }
 
-type States = "NSW" | "NT" | "WA" | "SA" | "VIC" | "TAS" | "ACT";
+type States = "NSW" | "NT" | "WA" | "SA" | "VIC" | "TAS" | "ACT" | "QLD";
 
 export type Address = {
   streetNumber?: string;
   streetName: string;
-  municipalitySubdivision: string;
-  municipality: string;
+  municipality?: string;
   countrySubdivisionCode: States;
-  postalCode: string;
+  postalCode?: string;
   countryCode: string;
-  country: string;
+  country: keyof typeof Countries;
   freeformAddress: string;
 };
 
-export type AutoCompleteDetails = Pick<
-  Address,
-  | "streetNumber"
-  | "countryCode"
-  | "country"
-  | "freeformAddress"
-  | "municipality"
-> & { placeId: string };
+export type AutoCompleteDetails = {
+  placeId: string;
+  streetName: string;
+  streetNumber?: string;
+  municipality?: string;
+  state: States;
+  postalCode?: string;
+  countryCode: string;
+  country: keyof typeof Countries;
+  freeformAddress: string;
+};
 
 export type TomTomAddressType = {
   type: string;

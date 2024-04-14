@@ -18,10 +18,12 @@ export async function getAutoCompleteDetails(
       id: placeId,
       address: {
         streetNumber,
+        streetName,
         countryCode,
         country,
         freeformAddress,
         municipality,
+        countrySubdivisionCode: state,
       },
     }) => ({
       placeId,
@@ -30,6 +32,8 @@ export async function getAutoCompleteDetails(
       country,
       freeformAddress,
       municipality,
+      state,
+      streetName,
     }),
   );
 }
